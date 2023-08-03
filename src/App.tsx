@@ -1,11 +1,11 @@
-import './App.css'
+import './App.css';
 
 function App() {
   return (
     <>
-      <span className='text-3xl'>Vite + React</span>
+      <span className="text-3xl">Vite + React</span>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
