@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "allowJs": false, // Disable JavaScript files to be imported inside your project
+    "allowSyntheticDefaultImports": true, // Allows you to write an import like: import React from "react"; instead of: import * as React from "react";
+    "forceConsistentCasingInFileNames": true, // TypeScript follows the case sensitivity rules of the file system it’s running on.
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -18,8 +22,14 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Paths */
+    "paths": {
+      "@shared/*": ["src/_shared/*"],
+      "@environments/*": ["src/environments/*"]
+    }
   },
-  "include": ["src"],
+  "include": ["src", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
